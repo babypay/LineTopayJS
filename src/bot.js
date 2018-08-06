@@ -1,11 +1,22 @@
 const LineConnect = require('./connect');
-let line = require('./main.js');
-let LINE = new line();
+const LINE = require('./main.js');
+console.info("\n\
+=========================================\n\
+BotName: LINE Etot JS\n\
+Rework : Team Anu Bot\n\
+Terima Kasih Kepada @Alfathdirk @TCR_TEAM @Raka_GoogleX\n\
+=========================================\n\
+\nNOTE : Ini Adalah AlphatJS Lama Buatan @Alfathdirk @TCR_TEAM Dan Ini Telah Dikembangin Oleh @TAB_TEAM\nTolong Untuk Tidak Perjual-Belikan Script Ini!\n\
+=======nekopoi RUNNING=======");
 
-
+/*
+| This constant is for auth/login
+| 
+| Change it to your authToken / your email & password
+*/
 const auth = {
-	authToken: '',
-	certificate: '',
+	authToken: ' Taro Toket Lo Disini Eh Maksud Nya Token ',
+	certificate: ' Taro Cerf Disini ',
 	email: '',
 	password: ''
 }
@@ -14,7 +25,6 @@ let client =  new LineConnect();
 //let client =  new LineConnect(auth);
 
 client.startx().then(async (res) => {
-	
 	while(true) {
 		try {
 			ops = await client.fetchOps(res.operation.revision);
@@ -27,6 +37,6 @@ client.startx().then(async (res) => {
 				LINE.poll(ops[op])
 			}
 		}
+		//LINE.aLike() //AutoLike (CAUSE LAG)
 	}
 });
-
